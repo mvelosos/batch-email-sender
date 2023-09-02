@@ -1,4 +1,4 @@
-# Batch Email Sender
+# Batch Email Service
 ## Domain
 
 A service responsible to send email in batch.
