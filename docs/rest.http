@@ -1,0 +1,11 @@
+GET http://localhost:3000/campaigns
+
+###
+
+POST http://localhost:3000/campaigns
+
+{
+    "name": "campaign name",
+    "content": "change password",
+    "emails": ["test@test.com"]
+}
