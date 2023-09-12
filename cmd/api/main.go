@@ -27,7 +27,7 @@ func main() {
 
 	campaignService.Repository.Get()
 
-	r.Get("/campaigns", endpoints.HandlerError(handler.CampaignGet))
+	r.Get("/campaigns/{id}", endpoints.HandlerError(handler.CampaignGetById))
 	r.Post("/campaigns", endpoints.HandlerError(handler.CampaignPost))
 
 	http.ListenAndServe(":3000", r)
