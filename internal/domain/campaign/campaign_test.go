@@ -42,6 +42,14 @@ func Test_NewCampaign_CreatedOnMustBeNow(t *testing.T) {
 	assert.Greater(campaign.CreatedOn, now)
 }
 
+func Test_NewCampaign_MustStatusStartAsPending(t *testing.T) {
+	assert := assert.New(t)
+
+	campaign, _ := NewCampaign(name, content, emails)
+
+	assert.Equal(campaign.Status, Pending)
+}
+
 func Test_NewCampaign_ValidatesNameMin(t *testing.T) {
 	assert := assert.New(t)
 
